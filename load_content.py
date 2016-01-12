@@ -10,8 +10,8 @@ CREDENTIALS = {
     'password': '12345'
 }
 
-HOST = 'http://localhost:5000/'
-# HOST = "http://95.213.199.248/"
+# HOST = 'http://localhost:5000/'
+HOST = "http://95.213.199.248/"
 
 
 def create_user(s):
@@ -42,7 +42,7 @@ def get_image_ids(s):
 
 
 def create_comment(s, image_id):
-    url = HOST + '/comment/new'
+    url = HOST + 'comment/new'
     for i in range(random.randrange(5, 10)):
         comment = s.post(url, data={
             'image_id': image_id,
@@ -60,5 +60,5 @@ if __name__ == '__main__':
     s = requests.session()
     create_user(s)
     login_user(s)
-    # load_images(s)
+    load_images(s)
     create_comments(s)

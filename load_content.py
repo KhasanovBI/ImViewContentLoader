@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import random
 from os import listdir, path
 
